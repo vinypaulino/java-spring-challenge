@@ -10,9 +10,9 @@ import lombok.Data;
 public class GeographCode {
 
 	@Column(name="geo_code_lat")
-	private Long latitude;
+	private double latitude;
 	
 	@Column(name="geo_code_log")
-	private Long longitude;
+	private double longitude;
 
 }
