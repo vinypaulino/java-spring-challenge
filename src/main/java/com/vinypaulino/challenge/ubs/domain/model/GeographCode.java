@@ -1,23 +1,18 @@
 package com.vinypaulino.challenge.ubs.domain.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+import lombok.Data;
+
+@Data
+@Embeddable
 public class GeographCode {
-	
+
+	@Column(name="geo_code_lat")
 	private Long latitude;
+	
+	@Column(name="geo_code_log")
 	private Long longitude;
 
-	public Long getLatitude() {
-		return latitude;
-	}
-
-	public void setLatitude(Long latitude) {
-		this.latitude = latitude;
-	}
-
-	public Long getLongitude() {
-		return longitude;
-	}
-
-	public void setLongitude(Long longitude) {
-		this.longitude = longitude;
-	}
 }
