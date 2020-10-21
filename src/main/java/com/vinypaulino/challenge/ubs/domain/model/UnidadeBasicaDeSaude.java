@@ -6,11 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 import lombok.Data;
 
 @Data
 @Entity
-public class UnidadeBasicaDeSaude {
+public class UnidadeBasicaDeSaude implements Comparable<UnidadeBasicaDeSaude>{
+
+	public UnidadeBasicaDeSaude() {
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +29,11 @@ public class UnidadeBasicaDeSaude {
 	
 	@Embedded
 	private Scores scores;
+
+	@Override
+	public int compareTo(UnidadeBasicaDeSaude o) {
+		return Double.compare(this.geoCode.getDistance(), o.getGeoCode().getDistance());
+	}
 	
 
 

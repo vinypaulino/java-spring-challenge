@@ -12,7 +12,7 @@ public class GeographCodeTest {
 		geoCode.setLatitude(-10.9112370014188);
 		geoCode.setLongitude(-37.0620775222768);
 		
-		double distance = geoCode.distance(-23.604936, -46.692999);
+		double distance = geoCode.calcDistance(-23.604936, -46.692999);
 		
 		assertEquals(1741384.810963698d, distance, 00001);
 	}

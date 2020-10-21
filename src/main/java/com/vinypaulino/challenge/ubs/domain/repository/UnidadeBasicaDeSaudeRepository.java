@@ -1,13 +1,11 @@
 package com.vinypaulino.challenge.ubs.domain.repository;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.vinypaulino.challenge.ubs.domain.model.UnidadeBasicaDeSaude;
 
-public interface UnidadeBasicaDeSaudeRepository {
-	
-	
-	//Receber a query 
-	List<UnidadeBasicaDeSaude> list();
+@Repository
+public interface UnidadeBasicaDeSaudeRepository extends JpaRepository<UnidadeBasicaDeSaude, Long> {
 
 }
